@@ -17,7 +17,8 @@ class LastScreen extends StatelessWidget {
             Text('This is the last page'),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushReplacementNamed(context, '/');
+                //Navigator.pushReplacementNamed(context, '/');
+                Navigator.popUntil(context, ModalRoute.withName('/'));
               },
               child: Text('Go to home'),
             ),

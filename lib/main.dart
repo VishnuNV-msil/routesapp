@@ -59,9 +59,11 @@ class HomePage extends StatelessWidget {
             ElevatedButton(
               child: Text('Logout'),
               onPressed: () {
-                Navigator.of(context).pushReplacementNamed(
-                    LoginScreen.routeName,
-                    arguments: 'hello');
+                Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) => LoginScreen('hello User'),
+                  ),
+                );
               },
             ),
           ],

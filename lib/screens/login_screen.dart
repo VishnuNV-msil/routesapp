@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'last_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   //const LoginScreen({super.key});
@@ -11,6 +12,12 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_sharp),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
         title: Text('Login'),
       ),
       body: Center(
@@ -19,7 +26,7 @@ class LoginScreen extends StatelessWidget {
             Text('This is the login page'),
             ElevatedButton(
               onPressed: () {
-                Navigator.pushReplacementNamed(context, '/last', arguments: 'better get back to home!');
+                Navigator.pushNamed(context, '/last', arguments: 'better get back to home!');
               },
               child: Text('Go to Last screen'),
             ),
